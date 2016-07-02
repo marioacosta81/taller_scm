@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+	<h:form>
+
+		<p:panel header="La Calculador" id="pnlFormularioCalculadora">
+			<h:panelGrid columns="2" border="0">
+
+				<p:outputLabel value="numero 1" />
+				<p:inputText id="num1" binding="#{calculadoraController.numero1}"/>
+
+				<p:outputLabel value="numero 2" />
+				<p:inputText id="num2" binding="#{calculadoraController.numero2}"/>
+
+
+
+			</h:panelGrid>
+			<h:panelGrid columns="1" border="0">
+				<p:commandButton id="btnSumar" value="Sumar" action="#{calculadoraController.sumar}"
+					update="resultado"/>
+			</h:panelGrid>
+			
+			<p:outputLabel value="resultado" />
+			<p:inputText id="resultado" binding="#{calculadoraController.resultado}"/>
+			
+		</p:panel>
+	</h:form>
+
+
+
+</h:body>
+</html>
